@@ -1,0 +1,62 @@
+[
+    {
+        "testCaseId": 1,
+        "action": "Login to Asana",
+        "navigationPath": "Cross-functional project plan, Project",
+        "verification": {
+            "task": "Draft project brief",
+            "column": "To do",
+            "tags": [ "Non-Priority", "On track" ]
+        }
+    },
+    {
+        "testCaseId": 2,
+        "action": "Login to Asana",
+        "navigationPath": "Cross-functional project plan, Project",
+        "verification": {
+            "task": "Schedule kickoff meeting",
+            "column": "To do",
+            "tags": [ "Medium", "At risk" ]
+        }
+    },
+    {
+        "testCaseId": 3,
+        "action": "Login to Asana",
+        "navigationPath": "Cross-functional project plan, Project",
+        "verification": {
+            "task": "Share timeline with teammates",
+            "column": "To do",
+            "tags": [ "High", "Off track" ]
+        }
+    },
+    {
+        "testCaseId": 4,
+        "action": "Login to Asana",
+        "navigationPath": "Work Requests",
+        "verification": {
+            "task": "[Example] Laptop setup for new hire",
+            "column": "New Requests",
+            "tags": [ "Medium priority", "Low effort", "New hardware", "Not Started" ]
+        }
+    },
+    {
+        "testCaseId": 5,
+        "action": "Login to Asana",
+        "navigationPath": "Work Requests",
+        "verification": {
+            "task": "[Example] Password not working",
+            "column": "In Progress",
+            "tags": [ "Low effort", "Low priority", "Password reset", "Waiting" ]
+        }
+    },
+    {
+        "testCaseId": 6,
+        "action": "Login to Asana",
+        "navigationPath": "Work Requests",
+        "verification": {
+            "task": "[Example] New keycard for Daniela V",
+            "column": "Completed",
+            "tags": [ "Low effort", "New hardware", "High Priority", "Done" ]
+        }
+    }
+]
