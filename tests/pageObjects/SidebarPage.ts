@@ -14,13 +14,10 @@ export class SidebarPage {
     async navigateToSection(navigationPath: string) {
         
         const elements = this.getNavigationElement(navigationPath);
-       // const count = await elements.count();
+       
          
             await elements.click();
             console.log(`Navigated to: ${navigationPath}`);
-        //} else {
-        //    console.log(`Found ${count} elements with the text "${navigationPath}".`);
-        //    throw new Error('Ambiguous navigation path.');
-        //}
+         
     }
 }
