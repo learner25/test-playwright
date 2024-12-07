@@ -38,7 +38,7 @@ use: {
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        headless:true
+        headless:false
        },
     },
 
@@ -71,6 +71,7 @@ use: {
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
+    
   ],
 
   /* Run your local dev server before starting the tests */
@@ -79,5 +80,6 @@ use: {
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
+  defaultProject: 'chromium'
 });
 
