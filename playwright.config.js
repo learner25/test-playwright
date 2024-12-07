@@ -1,6 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
-
+import dotenv from 'dotenv';
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -32,6 +32,7 @@ use: {
     trace: 'on-first-retry',
     browserName:'chromium',
     headless:false,
+    password: process.env.PASSWORD,
   },
 
   /* Configure projects for major browsers */
