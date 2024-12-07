@@ -40,9 +40,7 @@ use: {
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-     
-        
-       },
+      },
     },
 
     {
