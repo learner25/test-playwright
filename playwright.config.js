@@ -30,6 +30,7 @@ use: {
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    browserName:'chromium'
   },
 
   /* Configure projects for major browsers */
@@ -38,7 +39,8 @@ use: {
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        headless:false
+        headless:false,
+        headed:true
        },
     },
 
@@ -80,6 +82,6 @@ use: {
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
-  defaultProject: 'chromium'
+  
 });
 
