@@ -15,15 +15,17 @@ test.describe('Asana Login Tests-3', () => {
     test.afterEach(async ({ page }) => {
         console.log('Test done!');
     });
-
+   
     test('Navigate and verify project task details', async ({ page }) => {
+        console.log(process.env.PAWSSWORD)
         const loginPage = new LoginPage(page);
         const sidebarPage = new SidebarPage(page);
         const boardPage = new BoardPage(page);
         const password = process.env.PASSWORD;
+        const email = process.env.EMAIL
         // Perform login
         await loginPage.navigateToLogin();
-        await loginPage.enterEmail('ben+pose@workwithloop.com');
+        await loginPage.enterEmail(email);
         await loginPage.enterPasswordAndLogin(password);
 
         // Wait briefly after login to ensure everything is loaded
