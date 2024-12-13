@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
-
+import { BoardSelectors } from '../Selectors/BoardInterface';
 export class BoardPage {
     private page: Page;
 
@@ -8,7 +8,7 @@ export class BoardPage {
     }
 
     getColumn(columnName: string): Locator {
-        return this.page.locator('.CommentOnlyBoardColumn', { hasText: columnName });
+        return this.page.locator(BoardSelectors.Board+" "+BoardSelectors.Header, { hasText: columnName });
     }
 
     getTask(taskName: string): Locator {
