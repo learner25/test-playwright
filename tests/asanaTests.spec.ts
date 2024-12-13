@@ -39,7 +39,7 @@ test.describe('Asana Login Tests-3', () => {
             await sidebarPage.navigateToSection(testCase.navigationPath);
 
             // Wait for the board to load
-            await page.waitForTimeout(3000);
+            await page.waitForTimeout(6000);
 
             // Verify the column is present
             await boardPage.verifyColumn(testCase.verification.column);

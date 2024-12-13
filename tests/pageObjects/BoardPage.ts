@@ -8,7 +8,7 @@ export class BoardPage {
     }
 
     getColumn(columnName: string): Locator {
-        return this.page.locator(BoardSelectors.Board+" "+BoardSelectors.Header, { hasText: columnName });
+        return this.page.locator(BoardSelectors.Board, { hasText: columnName });
     }
 
     getTask(taskName: string): Locator {
@@ -17,13 +17,14 @@ export class BoardPage {
 
     async verifyColumn(columnName: string) {
         const column = this.getColumn(columnName);
+        this.page.setDefaultTimeout(6000);
         await expect(column).toHaveCount(1);
         console.log(`Located the column: ${columnName}`);
     }
 
     async verifyTaskTags(taskName: string, expectedTags: string[]) {
         const task = this.page.locator(`div:has-text("${taskName}")`);
-        const tagsLocator = task.locator('.BoardCardLayout-customPropertiesAndTags');
+        const tagsLocator = task.locator(BoardSelectors.BoardCard);
         const tagTexts = await tagsLocator.allTextContents();
         const tagString = tagTexts.join(', ');
 

@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 import { LoginSelectors } from '../Selectors/LoginInterface';
+
 export class LoginPage {
     private page: Page;
 
