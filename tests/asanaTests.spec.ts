@@ -47,6 +47,7 @@ test.describe('Asana Login Tests-3', () => {
             // Verify the task and its associated tags
             await boardPage.verifyTaskTags(testCase.verification.task, testCase.verification.tags);
         }
+         
 
         console.log('Verification completed.');
     });
